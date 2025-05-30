@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.employee-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.employee-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.employee-table tr:hover {
+    background-color: #f0f0f0;
+}
