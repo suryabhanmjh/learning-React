@@ -17,7 +17,7 @@ const App=()=>{
   })
   return(
     <>
-     <h1 align="center">Welcome To Employeeee Records!!!!</h1>
+     <h1 align="center" >Welcome To Employeeee Records!!!!</h1>
      <hr />
      <table border="1" width="500px">
       <tr>

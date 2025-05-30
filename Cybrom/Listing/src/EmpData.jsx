@@ -1,6 +1,6 @@
 const EmpData=[
      {
-        "name":"Riyaa",
+        "name":"Raam",
         "empno":1006,
         "department":"Civil",
         "salary":"78000"
@@ -12,20 +12,20 @@ const EmpData=[
         "salary":"68000"
     },
      {
-        "name":"Divyaa",
+        "name":"Dinesh",
         "empno":2007,
         "department":"CHO",
         "salary":"68000"
     },
     
     {
-        "name":"Priyaa",
+        "name":"Priyansh",
         "empno":2237,
         "department":"HR",
         "salary":"48000"
     },
     {
-        "name":"Ram",
+        "name":"Shyam",
         "empno":2907,
         "department":"Clerk",
         "salary":"34000"
