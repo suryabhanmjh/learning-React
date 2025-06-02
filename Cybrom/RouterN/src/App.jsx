@@ -1,11 +1,10 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import NoPage from './Pages/NoPage';
-import Addresh from './Pages/Addresh';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Join from './Pages/Join';
+import Contact from './pages/Contact';
 const App = () => {
   return (
     <>
@@ -15,17 +14,14 @@ const App = () => {
       <Route index element={<Home/>}/>
       <Route path="home" element={<Home/>}/>
       <Route path="about" element={<About/>}/>
+      <Route path="services" element={<Services/>}/>
+      <Route path="join" element={<Join/>}/>
       <Route path="contact" element={<Contact/>}/>
-      <Route path="addresh" element={<Addresh/>}/>
 
-      <Route path="*" element={<NoPage/>}/>
-
-
-      </Route>
+    </Route>
     </Routes>
     </BrowserRouter>
     </>
   )
 }
-
-export default App
+export default App;
