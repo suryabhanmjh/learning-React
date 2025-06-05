@@ -1,0 +1,10 @@
+{
+    "students":[
+        {
+            "id":1,
+            "rollno":567,
+            "name":"ramesh",
+            "fee":564
+        }
+    ]
+}

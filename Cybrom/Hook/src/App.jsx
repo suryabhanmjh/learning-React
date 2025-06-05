@@ -138,34 +138,75 @@
 
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
-const App = () => {
+// const App = () => {
   
-  const [input, setInput] = useState({});
+//   const [input, setInput] = useState({});
 
-  const handleInput = (e) => {
-    let name=e.target.name;
-    let value=e.target.value;
-    setInput(value=>({...value, [name]:value}));
-  }
+//   const handleInput = (e) => {
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(value=>({...value, [name]:value}));
+//   }
 
-  return (
-    <>
 
-     <h1>Application Form</h1>
-     Enter Rollno: <input type="text" name="rollno" onChange={handleInput} />
+//   return (
+//     <>
 
-      <br />
-     Enter name : <input type="text" name="name"  onChange={handleInput} />
-     <br />
-     Enter city : <input type="text"  name="city"  onChange={handleInput} />
-      <br />
-     Enter fees : <input type="text"  name="fees"  onChange={handleInput} /> 
+//      <h1>Application Form</h1>
+//      Enter Rollno: <input type="text" name="rollno" onChange={handleInput} />
 
-      <button>Click!</button> 
-    </>
-  );
-};
+//       <br />
+//      Enter name : <input type="text" name="name"  onChange={handleInput} />
+//      <br />
+//      Enter city : <input type="text"  name="city"  onChange={handleInput} />
+//       <br />
+//      Enter fees : <input type="text"  name="fees"  onChange={handleInput} /> 
 
-export default App;
+//       <button onClick >Click!</button> 
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+// import { useState } from "react";
+
+// const App = () => {
+  
+//   const [input, setInput] = useState({});
+
+//   const handleInput = (e) => {
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(valuees=>({...valuees, [name]:value}));
+//     console.log(input);
+//   }
+//   const handleSubmit=async()=>{
+//     let api="";
+//     const response= aeait axios.post(api, input);
+//     alert ({Data Ensert})
+    
+//   }
+
+//   return (
+//     <>
+
+//      <h1>Application Form</h1>
+//      Enter Rollno: <input type="text" name="rollno" onChange={handleInput} />
+
+//       <br />
+//      Enter name : <input type="text" name="name"  onChange={handleInput} />
+//      <br />
+//      Enter city : <input type="text"  name="city"  onChange={handleInput} />
+//       <br />
+//      Enter fees : <input type="text"  name="fees"  onChange={handleInput} /> 
+
+//       <button onClick={handleSubmit} >Click!</button> 
+//     </>
+//   );
+// };
+
+// export default App;
