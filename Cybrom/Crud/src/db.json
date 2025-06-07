@@ -1,0 +1,46 @@
+{
+  "employee": [
+    {
+      "id": "6a51",
+      "empno": "4",
+      "name": "kdjlk",
+      "designation": "iej",
+      "city": "kldj"
+    },
+    {
+      "id": "c9fd",
+      "empno": "5",
+      "name": "njhj",
+      "designation": "bjbh",
+      "city": "vgv"
+    },
+    {
+      "id": "2964",
+      "empno": "56",
+      "name": "568",
+      "designation": "sffj",
+      "city": "dge6"
+    },
+    {
+      "id": "1883",
+      "empno": "56",
+      "name": "568",
+      "designation": "sffj",
+      "city": "dge6"
+    },
+    {
+      "id": "20f0",
+      "empno": "56",
+      "name": "dg",
+      "designation": "vxc",
+      "city": "dg"
+    },
+    {
+      "id": "7b98",
+      "empno": "56uy",
+      "name": "dg",
+      "designation": "vxc",
+      "city": "dg"
+    }
+  ]
+}
