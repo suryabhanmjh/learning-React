@@ -1,5 +1,5 @@
 import React from 'react'
-import { Increment, Decrement } from './counterSlice'
+import { bgcolorChange  } from './coloSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 const App = () => {
