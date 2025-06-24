@@ -4,6 +4,8 @@ import { addTodo, toggleTodo, deleteTodo } from './todoSlice'
 
 const App = () => {
   const [input, setInput] = useState('');
+  const [editId, setEditId] = useState(null);
+  const [editText, setEditText] = useState('');
   const todos = useSelector((state) => state.todos.items);
   const dispatch = useDispatch();
 
@@ -13,6 +15,22 @@ const App = () => {
       dispatch(addTodo(input));
       setInput('');
     }
+  };
+
+  const handleEdit = (todo) => {
+    setEditId(todo.id);
+    setEditText(todo.text);
+  };
+
+  const handleEditSave = (id) => {
+    dispatch({ type: 'todos/editTodo', payload: { id, text: editText } });
+    setEditId(null);
+    setEditText('');
+  };
+
+  const handleEditCancel = () => {
+    setEditId(null);
+    setEditText('');
   };
 
   return (
@@ -46,16 +64,52 @@ const App = () => {
                 checked={todo.completed}
                 onChange={() => dispatch(toggleTodo(todo.id))}
               />
-              <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-                {todo.text}
-              </span>
+              {editId === todo.id ? (
+                <>
+                  <input
+                    type="text"
+                    className="form-control d-inline-block"
+                    style={{ width: 'auto' }}
+                    value={editText}
+                    onChange={e => setEditText(e.target.value)}
+                  />
+                  <button
+                    className="btn btn-success btn-sm ms-2"
+                    onClick={() => handleEditSave(todo.id)}
+                  >
+                    Save
+                  </button>
+                  <button
+                    className="btn btn-secondary btn-sm ms-2"
+                    onClick={handleEditCancel}
+                  >
+                    Cancel
+                  </button>
+                </>
+              ) : (
+                <>
+                  <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+                    {todo.text}
+                  </span>
+                </>
+              )}
             </div>
-            <button
-              className="btn btn-danger btn-sm"
-              onClick={() => dispatch(deleteTodo(todo.id))}
-            >
-              Delete
-            </button>
+            <div>
+              {editId !== todo.id && (
+                <button
+                  className="btn btn-primary btn-sm me-2"
+                  onClick={() => handleEdit(todo)}
+                >
+                  Edit
+                </button>
+              )}
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => dispatch(deleteTodo(todo.id))}
+              >
+                Delete
+              </button>
+            </div>
           </li>
         ))}
       </ul>
